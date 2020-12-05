@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+
+		<title>AUA Volunteering</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="volunteer.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Homenaje" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Scope+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Biryani:200|Scope+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Palanquin:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Heebo:100|Kanit:100|Yanone+Kaffeesatz:200" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Biryani:900|Heebo:100|Kanit:100|Yanone+Kaffeesatz:200" rel="stylesheet">
+
+		<script type="text/javascript" src="volunteer.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+<!-- Header -->
+		<header>
+			<a href="https://aua.am/"> 
+    	    <img src="images/aualogo.png" class="logo"/> 
+			
+		</header>
+
+<!-- Nav -->
+		<nav>
+			<div class="bg-text">
+				<h1 class="welcome">WELCOME TO AUA VOLUNTEERING</h1>
+				<h1 class="title">#1 VOLUNTEERING <strong>Website</strong></h1>
+				<h1 class="mission">Amid the hard times that we are facing, in the frameworks of our "Introduction to Programming" course, we decided to develop an application, which would mobilize the work of volunteers by notifying them about available work based on different metrics, such as free time available and skills. As a prospective volunteer, you will just need to fill out some information regarding your skills and time availability and volunteering opportunities will come your way! 
+				</h1>
+			</div>
+		</nav>
+
+<!-- AUA Information -->
+		<div id="information">
+			<div class="hands"><img src="images/volunteering.png"></div>
+			<div class="aua-text">
+				<h1 class="volunteering-aua">Volunteering AUA</h1>
+				<h1 class="core-info">The American University of Armenia (AUA) is a private, independent university in Yerevan, Armenia that is accredited by the Western Association of Schools and Colleges Senior College and University Commission.</h1>
+				<h1 class="general-info"> It was founded in 1991, Armenia's first year of independence, by the Armenian General Benevolent Union (AGBU), the University of California (UC), and the Armenian government. The university is the country's first institution modeled on Western-style higher education, committed to teaching, research, and service; it offers master's degrees in nine fields and bachelor's degrees in five fields.</h1>
+				<a href="https://aua.am/"><button class="submit-form-button">Learn More </button></a>
+			</div>
+		</div>
+
+<!-- Top Arrow -->
+		<div id="pot"><a href="#top"><i class="fas fa-arrow-up"></i></a></div>
+
+<!-- Volunteering Form -->
+		<div id="bg">
+			<h1 class="form-title">Volunteering Form</h1>
+			<div id="form-content">
+			  	<div>
+				    <label for="fname" style="font-weight: bold; ">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name.."  onblur="handleInputValidation(event, 'fname_error')">
+					<span id="fname_error"> *The name can not be empty </span>
+
+				    <label for="lname" style="font-weight: bold; ">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name.." onblur="handleInputValidation(event, 'lname_error')">
+					<span id="lname_error"> *The last name can not be empty </span>
+
+				    <label for="email" style="font-weight: bold; ">Email</label>
+					<input type="text" id="email" name="email" placeholder="Your email.." onblur="handleInputValidation(event, 'email_error')">
+					<span id="email_error"> *The email can not be empty </span>
+
+				    <label for="phoneNumber" style="font-weight: bold;">Phone Number (optional)</label>
+					<input type="text" id="phone" name="phoneNumber" placeholder="Your phone number...">
+					
+				    <p id="gender" style="font-weight: bold;">Please select your gender:</p> 
+					  	<p class="gender-options">
+					      	<label>
+					        	<input name="gender" type="radio" class="age" value="Male" />
+					        	<span>Male</span>
+					      	</label>
+					    </p>
+					    <p class="gender-options">
+					      	<label>
+					        	<input name="gender" type="radio" class="age" value="Female" />
+					        	<span>Female</span>
+					      	</label>
+					    </p>
+					    <p class="gender-options">
+					      	<label>
+					        	<input  name="gender" type="radio" class="age" value="Other"/>
+					        	<span>Other</span>
+					      	</label>
+					    </p>
+					    <p class="gender-options">
+					      	<label>
+					        	<input name="gender" type="radio" class="age" value="Prefer not to say">
+					        	<span>Prefer not to say</span>
+					      	</label>
+						</p>
+						<span id="gender_error"> *The gender must be selected </span>
+						
+
+					<p id="age" style="font-weight: bold; ">Please select your age</p>
+				    <select id="selected-age">
+				    	<option>Less than 18</option>
+				    	<option>18-24</option>
+				    	<option>25-34</option>
+				    	<option>35-44</option>
+				    	<option>45-54</option>
+				    	<option>55-65</option>
+				    	<option>More than 65</option>
+				    	<option>Prefer not to say</option>
+					</select>
+
+				    <label for="country" style="font-weight: bold; ">Country</label>
+				    <select id="selected-country" name="country" onchange="handleLocationChange()">
+				        <option value="Armenia">Armenia</option>
+				        <option value="Australia">Australia</option>
+						<option value="Canada">Canada</option>
+						<option value="Georgia">Georgia</option>
+						<option value="India">India</option>
+						<option value="Iran">Iran</option>
+						<option value="Lebanon">Lebanon</option>
+						<option value="Russia">Russia</option>
+						<option value="Syria">Syria</option>
+						<option value="Ukraine">Ukraine</option>
+						<option value="UK">UK</option>
+						<option value="USA">USA</option>
+						<option value="Other">Other</option>
+				    </select>
+
+				    <div class="form-group" id="otherLocationBox">
+	   					<label style="font-weight: bold; ">Other location</label>
+	   					<input type="text" name="otherLocation" id="other-location">
+	   				</div>
+
+				    <label for="free-time" style="font-weight: bold; ">Free Time Available</label>
+				    <input type="text" id="free-time" name="free-time" placeholder="Mention free time available e.g. 18:30-20:30 ..." onblur="handleInputValidation(event, 'freeTime_error')">
+					<span id="freeTime_error"> *Free time can not be empty </span>
+
+				  	<div id="skills">
+					    <label for="skills" style="font-weight: bold; display: block;">Skills</label>
+						<div>
+						  	<input class="skill" type="checkbox" id="logistics" name="logistics" value="Logistics">
+						  	<label for="logistics">Logistics</label>
+						</div>
+						<div>
+						  	<input class="skill" type="checkbox" id="physical" name="physical" value="Physical Work">
+						  	<label for="physical">Physical Work</label>
+						</div>
+						<div>
+						  	<input class="skill" type="checkbox" id="writing" name="writing" value="Writing value">
+						  	<label for="writing">Writing</label>
+						</div>
+						<div>
+						  	<input class="skill" type="checkbox" id="english" name="english" value="English Language">
+						  	<label for="english">English Language</label>
+						</div>
+						<div>
+						  	<input class="skill" type="checkbox" id="social" name="social" value="Social Media Mobilization">
+						  	<label for="social">Social Media Mobilization</label>
+						</div>
+						<div>
+						  	<input class="skill" type="checkbox" id="notlistedskill" name="notlistedskill" value="Other" onchange="handleSkillChange()">
+						  	<label for="notlistedskill">Other</label>
+						</div>
+
+					    <input type="text" id="other-skills" name="other-skills">
+					</div>
+				    	<input type="submit" value="Submit" class="volunteering-submit" onclick="checkFunction()">
+			  	</div>
+			</div>
+		</div>
+
+<!-- About Volunteering -->
+		<div class="aua-building">
+			<h3 class="step-to-volunteering">Take the First Step to Volunteering!</h3>			
+			<h3 class="quote">You make a life by what you give.</h3>			
+			<h3 class="volunteers">Volunteers are the only human beings on the face of the earth who reflect this nation’s compassion, unselfish caring, patience, and just plain loving one another.</h3>		
+		</div>
+
+<!-- Volunteering Opportunities -->
+		
+		<content class="opportunities">
+			<div class="first-row">
+			<div>
+				<i class="far fa-user-circle"></i>
+				<p class="opportunity-title">Volunteering</p>
+				<p class="opportunity-desc">can help you make friends and grow your social circle. </p>
+			</div>
+			<div>
+				<i class="far fa-address-card"></i>
+				<p class="opportunity-title">Volunteering</p>
+				<p class="opportunity-desc">can help you learn new skills and advance your career. </p>
+			</div>
+			<div>
+				<i class="fas fa-fire"></i>
+				<p class="opportunity-title">Volunteering</p>
+				<p class="opportunity-desc">can help you feel way happier and healthier. </p>
+			</div>
+			</div>
+
+	</content>
+
+<!-- Footer -->
+	<footer id="footer">
+		<h3 class="footer-text">Copyright &copy; 2020, &nbsp;<a href="https://aua.am/" id="footer-link">American University of Armenia</a></h3>
+	</footer>
+
+	</body>
+</html>
+
