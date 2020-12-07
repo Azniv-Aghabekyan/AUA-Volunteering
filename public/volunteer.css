@@ -231,7 +231,7 @@ input[type=text], select {
 .volunteering-submit:hover {
   background-color: #FF6600;
 }
-#other-location {
+#otherLocationBox {
   display:none;
 }
 #other-skills {
