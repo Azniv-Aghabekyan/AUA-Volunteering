@@ -1,0 +1,556 @@
+/*added by Satenik*/
+*{
+  margin: 0px;
+  padding: 0;
+  line-height: 1;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*Header*/
+header{
+    display: flex;
+    background-color: white;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    padding: 10px 0;
+}
+.logo{
+    margin-left: 20%;
+    width: 400px;
+}
+
+/*Nav*/
+nav{
+  background-image: url(images/door.jpg);
+  animation-name:  animatedBackground;
+  animation-duration: 2s;
+
+  /* Background improvements (responsive) */
+
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+@keyframes animatedBackground {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes animatedtext {
+    from { 
+      opacity: 0;
+  }
+    to { 
+      opacity: 1;
+      margin-left: 20%;
+  }
+}
+.bg-text{
+    width: 40%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    animation-name:  animatedtext;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.welcome{
+  color: white;
+  position: relative;
+  font-family: 'Homenaje', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.title{
+    letter-spacing: 1px;
+    font-size: 65px;
+    font-family: 'Biryani', sans-serif;
+    margin-top: 25px;
+    font-weight: 100;
+    color:white;
+}
+.mission{
+    width:90%;
+    padding: 10px 5px;
+    border-left: 2px solid #FF6600; 
+    line-height: 1.4; 
+    margin-top: 50px;
+    padding-left: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    font-weight: 100;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 18px;
+    display: flex;
+}
+.bg-text>h1{
+    color: white;
+}
+
+/*AUA information*/
+#information{
+  display: flex;
+  width: 60%;
+  padding: 70px 0px;
+  margin: auto;
+  text-align: justify;
+}
+.hands{
+  margin: auto;
+}
+.volunteering-aua{
+  font-size: 35px;
+  color: #3B3940;
+  letter-spacing: .5;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Kanit', sans-serif;
+}
+.aua-text{
+  width: 70%;
+  margin-left: 10%;
+  font-size: 12px;
+  font-family: 'Kanit', sans-serif;
+}
+.core-info{
+  width: 80%;
+   font-size: 20px;
+  color: #3B3940;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-family: 'Kanit', sans-serif;
+}
+.general-info{
+   width: 90%;
+   font-size: 16px;
+  color: #8F8FA0;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Kanit', sans-serif;
+}
+.submit-form-button{
+  font-size: 20px;
+  width:220px;
+  height: 55px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #FF6600;
+  border:0px;
+  transition-duration: 1s;
+}
+.submit-form-button:hover{
+  background-color: #1B242D; 
+  color:white;
+}
+i{
+  color: #FF6600;
+  font-size: 50px;
+}
+#pot{
+  position: sticky;
+  text-align: right;
+  top: 93%;
+  margin-right: 20px; 
+}
+.fa-arrow-up{
+   font-size: 30px;
+   padding: 5px;
+   border-radius: 50px;
+   border: 2px solid #EF6000;
+}
+
+/*Volunteering Form*/
+#bg{
+  background-color: #1B242D;
+  padding: 50px 0px;
+}
+.form-title{
+  color: white;
+  font-size: 35px;
+  font-family: 'Palanquin', sans-serif;
+  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  width: 40%; 
+  text-align: center;
+  margin: auto;
+}
+#form-content{
+  width: 60%;
+  margin:auto;
+  margin-top: 50px;
+  padding-bottom: 200px;
+  border: 3px solid white;
+  padding: 30px 50px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Palanquin', sans-serif;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 15px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#gender, #age{
+  margin-top:8px;
+  margin-bottom: 0px;
+}
+::placeholder {
+  font-size: 18px;
+  font-family: 'times new roman';
+}
+#skills>div>input{
+  margin-top: 20px;
+}
+.gender-options>label>input{
+  margin-top: 15px;
+}
+.volunteering-submit {
+  width: 100%;
+  background-color: #1B242D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+.volunteering-submit:hover {
+  background-color: #FF6600;
+}
+#other-location {
+  display:none;
+}
+#other-skills {
+  display: none;
+}
+
+
+/*About Volunteering*/
+.aua-building{
+  background-image: url(images/mehndi.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 120px;
+  margin-top: 8%;
+}
+.aua-building h3{
+  color: white;
+  text-align: center;
+  font-family: 'Palanquin', sans-serif;
+}
+.step-to-volunteering{
+  padding-top: 150px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.quote{
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight:bold;
+  font-family: 'Biryani', sans-serif;
+}
+.volunteers{
+  font-size: 18px;
+  margin-bottom: 45px;
+  font-weight: 400;
+  width:25%; 
+  margin-left: 37.5%;
+  line-height: 1.4;
+}
+
+/*Volunteering Opportunities*/
+.title-opportuinties{
+  text-align: center;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 400;
+  color: #40404F;
+  font-size: 40px;
+}
+
+.first-row{
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  font-size: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.first-row>div{
+  width: 250px;
+  padding: 25px; 
+}
+.first-row i{
+  padding: 20px;
+  border-radius: 50px;
+  color: #FF6600;
+  transition-duration: .5s;
+}
+.first-row i:hover{
+  background-color: #FF6600;
+  color: white;
+  border-radius: circle
+}
+
+
+.opportunity-title{
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 400;
+  color: #444455;
+}
+
+.opportunity-desc{
+  font-size: 17px;
+  width: 85%;
+  color: #81828B;
+  margin-left: 7.5%;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+/*Footer*/
+#footer{
+  background-color: #FF6600;
+  color: white;
+  padding: 20px 0px;
+  margin-top: 50px;
+  text-align: center;
+}
+.footer-text{
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+#footer-link{
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/*Responsive*/
+@media(max-width: 700px) {
+  .logo {
+    margin-left: 10%; 
+  }
+  .bg-text {
+    width: 80%;
+  }
+  @keyframes animatedtext {
+    from { 
+      opacity: 0;
+    }
+    to { 
+      opacity: 1;
+      margin-left: 10%;
+    }
+    .aua-building h3{
+  }
+  }
+  .title {
+    font-size: 45px;
+  }
+  #information{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+  width: 80%;
+  }
+  .hands{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hands img {
+    width: 200px;
+  }
+  .aua-text{
+    width: 100%;
+    margin-left: 0;
+  }
+  .volunteering-aua{
+    text-align: center;
+    margin-top: 30px;
+  }
+  .core-info, .general-info {
+    width: 100%;
+  }
+  .quote{
+    font-size: 26px;
+  }
+  .volunteers{
+    font-size: 18px;
+    width: 60%; 
+    margin: auto;
+  }
+  .step-to-volunteering{
+    font-size: 24px;
+  }
+}
+
+/*Admin*/
+
+#admin-volunteering{
+  color: #29293A;
+  display: flex;
+  margin-right: 3%;
+  margin-left: 10%;
+  font-family: 'Homenaje', sans-serif;
+  font-size: 40px;
+  width: 40%;
+  font-weight: 500;
+  float:right;
+  padding-top:20px;
+}
+.admin-logo{
+  margin-left: 7%;
+}
+
+.volunteeringContainer {
+  display: flex;
+  margin: 2px 100px;
+}
+
+#volunteersList {
+  position: relative;
+  width: 100%;
+}
+
+
+#volunteersList li {
+  cursor: pointer;
+  color:black;
+  font-weight: 100;
+  text-align: center;
+  padding: 7px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 20px;
+  margin:3px;
+  border: 2px solid #1B242D;
+
+}
+.volunteeringDetails {
+  background-color:#1B242D;
+  border-radius: 5px;
+  padding:20px;
+  margin-top:10px;
+  list-style:decimal;
+  width: 50%;
+  margin-left: 25%;
+  color: white;
+}
+
+
+
+/* error css */
+#fname_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  display: none;
+}
+#lname_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  display: none;
+}
+#email_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  display: none;
+}
+#phone_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  display: none;
+}
+#gender_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: none;
+}
+#freeTime_error{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: small;
+  color: #EF6000;
+  padding-bottom: 5px;
+  display: none;
+}
+
+.message{
+  background-color:#FF6600;
+  padding:20px;
+  margin-top:150px;
+  list-style:decimal;
+}
+.thankYou{
+   font-family:Georgia, serif, Times; 
+   text-align: center;
+   color:#1B242D;
+}
+
+.buttonHideandShow{
+  width:fit-content;
+  margin: auto;
+  padding: 10px; 
+
+}
+.showAllBotton {
+  cursor: pointer;
+  width:200px;
+  padding:16px 16px;
+  border-radius:9px;
+  border:none;
+  background:#FFA500;
+  background-blend-mode:hue;
+  color:white;
+  margin-right:10px;
+}
+.hideAllBotton {
+  cursor: pointer;
+  width:200px;
+  padding:16px 16px;
+  border-radius:9px;
+  border:none;
+  background:#FFA500;
+  background-blend-mode:hue;
+  color:white;
+  margin-left:10px; 
+}
+.fieldTitle{
+  font-weight: bold;
+
+}
